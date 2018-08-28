@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author TOURNIER
+ *
+ */
+module asynchronismAndCommand {
+}
