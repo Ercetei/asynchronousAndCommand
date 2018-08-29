@@ -4,25 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Invoker {
-	private List<Command> functions = new ArrayList<Command>();
+
+	private List<Thread> functions = new ArrayList<Thread>();
 	private int currentIndex = 0 ;
 
 	public Invoker() {
 	}
 
-	//Add Function
-	public void store(Command fn) {
+	public void store(Thread fn) {
 		this.functions.add(fn);
 	}
 	
 	public void executeAll() {
-		for(Command c: functions) {
-			c.execute();
+		for(Thread t: functions) {
+			t.run();
 		}
 	}
 	
 	public void playIndex() {
-		functions.get(currentIndex).execute();
+		functions.get(currentIndex).run();
 		next();
 	}
 	
@@ -32,5 +32,5 @@ public class Invoker {
 			playIndex();
 		}
 	}
-	
+
 }
