@@ -1,4 +1,4 @@
-package asynchronismAndCommand;
+package com.infotel.asynchronismAndCommand;
 
 public class Main {
 

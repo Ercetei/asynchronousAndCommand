@@ -1,4 +1,4 @@
-package asynchronismAndCommand;
+package com.infotel.asynchronismAndCommand;
 
 import java.util.ArrayList;
 import java.util.List;
