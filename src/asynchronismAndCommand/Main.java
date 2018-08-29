@@ -3,12 +3,14 @@ package asynchronismAndCommand;
 public class Main {
 
 	public static void main(String[] args) {
-		Fn newFn = new Fn();
+		Invoker invoker = new Invoker();
+		
 		// Boucle for
-		for (int i = 0; i < 100; i++) {
-			Command executeFn = new ExecuteFn(newFn);
-			Command stopFn = new StopFn(newFn);
+		for (Integer i = 0; i != 10; i++) {
+			Integer a = i;
+			invoker.store(() -> {System.out.println("Action " + a);});
 		}
+		
+		invoker.executeAll();
 	}
-
 }

@@ -5,12 +5,12 @@ public class Fn {
 		
 	}
 	
-	public void executeFn() {
+	public void doAction1() {
 		System.out.println("Fn executed!");
 	}
 	
 
-	public void stopFn() {
+	public void doAction2() {
 		System.out.println("Fn stopped");
 	}
 }
