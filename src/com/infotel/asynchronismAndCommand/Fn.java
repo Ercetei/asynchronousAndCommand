@@ -6,11 +6,21 @@ public class Fn {
 	}
 	
 	public void doAction1() {
-		System.out.println("Fn executed!");
+		try {
+			Thread.sleep(1000);
+			System.out.println("Action 1 executed");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 
 	public void doAction2() {
-		System.out.println("Fn stopped");
+		try {
+			Thread.sleep(1000);
+			System.out.println("Action 2 executed");
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

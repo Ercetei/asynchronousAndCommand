@@ -1,19 +1,18 @@
 package com.infotel.asynchronismAndCommand;
-//package asynchronismAndCommand;
-//
-//public class StopFn implements Command {
-//
-//	private Fn fn;
-//	
-//	public StopFn(Fn fn) {
-//		this.fn = fn;
-//	}
-//
-//	@Override
-//	public void execute() {
-//		fn.doAction2();
-//	}
-//
-//
-//
-//}
+
+public class StopFn extends Thread{
+
+	private Fn fn;
+	
+	public StopFn(Fn fn) {
+		this.fn = fn;
+	}
+
+	@Override
+	public void run() {
+		fn.doAction2();
+	}
+
+
+
+}

@@ -4,18 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Invoker {
-	private List<Command> functions = new ArrayList<Command>();
+	private List<Thread> functions = new ArrayList<Thread>();
 
 	public Invoker() {
 	}
 
-	public void store(Command fn) {
+	public void store(Thread fn) {
 		this.functions.add(fn);
 	}
 	
 	public void executeAll() {
-		for(Command c: functions) {
-			c.execute();
+		for(Thread t: functions) {
+			t.run();
 		}
 	}
+
 }

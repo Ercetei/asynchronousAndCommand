@@ -4,12 +4,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		Invoker invoker = new Invoker();
+		Fn fn = new Fn();
 		
-		// Boucle for
-		for (Integer i = 0; i != 10; i++) {
-			Integer a = i;
-			invoker.store(() -> {System.out.println("Action " + a);});
-		}
+		invoker.store(new ExecuteFn(fn));
+		invoker.store(new ExecuteFn(fn));
+		invoker.store(new StopFn(fn));
+		invoker.store(new ExecuteFn(fn));
+		invoker.store(new StopFn(fn));
+		invoker.store(new ExecuteFn(fn));
+		invoker.store(new StopFn(fn));
+		
 		
 		invoker.executeAll();
 	}
